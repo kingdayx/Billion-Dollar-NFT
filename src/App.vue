@@ -76,7 +76,9 @@
         <li><a href="faq">FAQ</a></li>
         <li><a href="press">Press</a></li>
         <li>
-          <a href="https://github.com/thousandetherhomepage">Source code</a>
+          <a href="https://github.com/kingdayx/Billion-Dollar-NFT">
+            Source code
+          </a>
         </li>
       </ul>
       <ul>

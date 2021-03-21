@@ -1,6 +1,6 @@
 pragma solidity ^0.4.15;
 
-contract KetherHomepage {
+contract BillionNFT {
 
     /// Buy is emitted when an ad unit is reserved.
     event Buy(
@@ -69,11 +69,8 @@ contract KetherHomepage {
     /// ads are stored in an array, the id of an ad is its index in this array.
     Ad[] public ads;
 
-    function KetherHomepage(address _contractOwner, address _withdrawWallet) {
-        require(_contractOwner != address(0));
+    function BillionNFT(address _withdrawWallet) {
         require(_withdrawWallet != address(0));
-
-        contractOwner = _contractOwner;
         withdrawWallet = _withdrawWallet;
     }
 
@@ -87,7 +84,7 @@ contract KetherHomepage {
     ///   _x=5, _y=10, _width=3, _height=3
     /// Represents a 30x30 pixel ad at coordinates (50, 100)
     function buy(uint _x, uint _y, uint _width, uint _height) payable returns (uint idx) {
-        payable(address2).transfer(msg.value / 100); 
+        payable(address2).transfer(msg.value / 20); 
         uint cost = _width * _height * pixelsPerCell * weiPixelPrice;
         require(cost > 0);
         require(msg.value >= cost);
